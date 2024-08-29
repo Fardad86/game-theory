@@ -25,15 +25,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 31, 63, 0.8);
+    padding: 10px 20px; /* کاهش پدینگ برای کاهش ارتفاع هدر */
+    background-color: rgba(0, 31, 63, 0.6); /* مات کردن پس‌زمینه */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    -webkit-filter: blur(20px);
-    filter: blur(20px);
-    filter: url(blur.svg#blur);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* اضافه کردن سایه */
+    border-bottom: 1px solid rgba(0, 255, 204, 0.3); /* اضافه کردن لبه نئونی */
+    backdrop-filter: blur(15px); /* مات کردن پس‌زمینه */
 }
 
 .logo-container {
@@ -104,12 +104,26 @@ header {
 
 /* استایل بخش معرفی مجموعه */
 .intro-section {
-    height: 10vh;
+    height: 100vh; /* ارتفاع کامل صفحه نمایش */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #001f3f, #007f5f);
+    background: none; /* حذف پس‌زمینه */
+    color: white; /* رنگ متن به سفید برای خوانایی بهتر */
 }
+
+.intro-section h2 {
+    font-size: 4em; /* اندازه بزرگ‌تر برای عنوان */
+    font-weight: bold; /* ضخامت فونت */
+    margin: 0; /* حذف حاشیه اضافی */
+}
+
+.intro-section p {
+    font-size: 1.5em; /* اندازه فونت برای پاراگراف */
+    font-weight: normal; /* ضخامت نرمال برای پاراگراف */
+    margin: 20px 0 0; /* حاشیه بالای پاراگراف */
+}
+
 
 .intro-logo {
     height: 100px;
@@ -213,7 +227,7 @@ section p {
 .neon-line {
     position: absolute;
     width: 2px;
-    height: 100px;
+    height: 300px;
     background-color: rgba(0, 255, 204, 0.5);
     box-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
     animation: moveNeonLine 8s infinite linear;
@@ -221,10 +235,15 @@ section p {
 
 @keyframes moveNeonLine {
     0% {
-        transform: translateX(0) translateY(0) rotate(0deg);
+        transform: translateX(-100px) translateY(0) rotate(0deg);
+        opacity: 1; /* تنظیم شفافیت در ابتدای انیمیشن */
+    }
+    50% {
+        opacity: 0.5; /* تغییر شفافیت برای ایجاد اثر نوسان */
     }
     100% {
-        transform: translateX(100vw) translateY(-100vh) rotate(360deg);
+        transform: translateX(100vw) translateY(100vh) rotate(360deg);
+        opacity: 0; /* تنظیم شفافیت در انتهای انیمیشن */
     }
 }
 
