@@ -5,6 +5,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuIcon.addEventListener('click', function() {
         navMenu.classList.toggle('open');
+        menuIcon.classList.toggle('active');
+    });
+
+    // انیمیشن منوی همبرگری
+    menuIcon.addEventListener('click', function() {
+        if (menuIcon.classList.contains('active')) {
+            menuIcon.querySelectorAll('.bar')[0].style.transform = 'rotate(45deg) translateY(8px)';
+            menuIcon.querySelectorAll('.bar')[1].style.opacity = '0';
+            menuIcon.querySelectorAll('.bar')[2].style.transform = 'rotate(-45deg) translateY(-8px)';
+        } else {
+            menuIcon.querySelectorAll('.bar')[0].style.transform = 'rotate(0)';
+            menuIcon.querySelectorAll('.bar')[1].style.opacity = '1';
+            menuIcon.querySelectorAll('.bar')[2].style.transform = 'rotate(0)';
+        }
     });
 
     // اسکرول نرم به بخش‌های مختلف
@@ -26,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < 20; i++) {
         const neonLine = document.createElement('div');
         neonLine.className = 'neon-line';
-        neonLine.style.left = `${Math.random() * 100}%`;
-        neonLine.style.top = `${Math.random() * 100}%`;
+        neonLine.style.left = `${Math.random() * 100}vw`;
+        neonLine.style.top = `-${Math.random() * 100}px`;
         neonLine.style.width = `${Math.random() * 3 + 1}px`;
         neonLine.style.height = `${Math.random() * 200 + 50}px`;
         neonLine.style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 255, 0.5)`;
@@ -36,4 +50,17 @@ document.addEventListener('DOMContentLoaded', function() {
         neonLine.style.animationDelay = `${Math.random() * 5}s`;
         neonBackground.appendChild(neonLine);
     }
+
+    // انیمیشن اسلایدر گالری تصاویر
+    const gallerySlider = document.querySelector('.gallery-slider');
+    let galleryImages = gallerySlider.querySelectorAll('.gallery-image');
+    let currentIndex = 0;
+
+    function showNextImage() {
+        galleryImages[currentIndex].style.opacity = '0';
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        galleryImages[currentIndex].style.opacity = '1';
+    }
+
+    setInterval(showNextImage, 3000);
 });
