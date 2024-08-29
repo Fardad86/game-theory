@@ -1,29 +1,142 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import Persian Font */
+@font-face {
+    font-family: 'Vazir';
+    src: url('fonts/vazir.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
-    font-family: 'Roboto', sans-serif;
-}
-
-.bg-timberwolf-100 {
-    background-color: #ebebea;
-}
-
-.bg-timberwolf-500 {
-    background-color: #d2d2cf;
-}
-
-.bg-dark_spring_green-100 {
-    background-color: #9fd9af;
-}
-
-.bg-dark_spring_green-500 {
-    background-color: #317a46;
-}
-
-.text-timberwolf-900 {
+    font-family: 'Vazir', sans-serif;
+    margin: 0;
+    padding: 0;
     color: #2b2b29;
+    direction: rtl;
+    overflow-x: hidden;
 }
 
-.text-dark_spring_green-300 {
-    color: #45ac62;
+/* Background Animation */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #CECECB, #317A46);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Header */
+.header {
+    background-color: #317A46;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px 0;
+}
+
+.section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.section.bg-light {
+    background-color: #f5f5f4;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form button {
+    background-color: #317A46;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45ac62;
+}
+
+/* Footer */
+.footer {
+    background-color: #317A46;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
