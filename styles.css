@@ -253,18 +253,11 @@ section p {
 /* خطوط نئونی رنگی در پس‌زمینه */
 .neon-line {
     position: absolute;
-    width: 2px;
-    height: 100px;
-    background-color: rgba(0, 255, 204, 0.7); /* رنگ براق‌تر */
-    box-shadow: 0 0 20px rgba(0, 255, 204, 1), /* افزایش افکت Glow */
-                0 0 30px rgba(0, 255, 204, 0.8),
-                0 0 40px rgba(0, 255, 204, 0.6),
-                0 0 50px rgba(0, 255, 204, 0.4);
-    animation: moveNeonLine 8s infinite ease-in-out; /* تنظیم انیمیشن */
     opacity: 0; /* شروع با شفافیت صفر */
+    animation: moveNeonLine var(--animation-duration, 8s) var(--animation-delay, 0s) infinite ease-in-out;
 }
 
-/* انیمیشن برای حرکت خطوط نئونی از پایین به بالا با رندوم بودن */
+/* انیمیشن برای حرکت خطوط نئونی از پایین به بالا با حرکت رندوم */
 @keyframes moveNeonLine {
     0% {
         transform: translateX(calc(100vw * var(--random-x))) translateY(100vh) rotate(calc(360deg * var(--random-rotate)));
@@ -285,6 +278,7 @@ section p {
         opacity: 0;
     }
 }
+
 
 
 /* استایل فوتر */
