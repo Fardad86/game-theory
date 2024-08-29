@@ -1,90 +1,111 @@
-/* تنظیمات پایه */
-@font-face {
-    font-family: 'Vazir';
-    src: url('path-to-font/vazir.woff2') format('woff2'),
-         url('path-to-font/vazir.woff') format('woff'),
-         url('path-to-font/vazir.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* استایل‌های عمومی */
 body {
     font-family: 'Vazir', sans-serif;
-    direction: rtl;
-    background-color: var(--dark-blue);
-    color: var(--light-green);
+    background: linear-gradient(135deg, #001f3f, #007f5f);
+    color: white;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    direction: rtl;
 }
 
-/* رنگ‌های استفاده شده */
-:root {
-    --dark-green: #264653;
-    --medium-green: #2A9D8F;
-    --light-green: #E9C46A;
-    --dark-blue: #14213D;
-    --medium-blue: #0077B6;
-    --light-blue: #00B4D8;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* استایل هدر */
-.header {
-    background-color: var(--medium-blue);
-    color: var(--light-green);
-    padding: 20px;
+/* استایل Header */
+header {
+    background-color: rgba(0, 31, 63, 0.8);
+    padding: 20px 0;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
-.header h1 {
+header h1 {
     margin: 0;
     font-size: 2em;
 }
 
-/* استایل بخش‌ها */
-.section {
-    background-color: var(--dark-green);
-    color: var(--light-blue);
-    padding: 40px 20px;
-    margin: 20px;
-    border-radius: 8px;
+header nav ul {
+    list-style: none;
+    padding: 0;
 }
 
-.section h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
 }
 
-.section p {
-    font-size: 1em;
-    line-height: 1.6;
-}
-
-/* استایل برای لینک‌ها */
-a {
-    color: var(--medium-green);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: var(--light-green);
-}
-
-/* استایل برای دکمه‌ها */
-.button {
-    background-color: var(--medium-green);
+header nav ul li a {
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #00ffcc;
+}
+
+/* استایل بخش‌ها */
+section {
+    padding: 80px 0;
     text-align: center;
 }
 
-.button:hover {
-    background-color: var(--light-green);
+section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    position: relative;
 }
 
+section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* استایل Footer */
+footer {
+    background-color: rgba(0, 31, 63, 0.8);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* انیمیشن‌ها */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc;
+    }
+    50% {
+        text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc, 0 0 160px #00ffcc, 0 0 320px #00ffcc;
+    }
+    100% {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc;
+    }
+}
+
+section h2 {
+    animation: glow 2s infinite alternate;
+}
+
+/* استایل‌های واکنش‌گرا */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section h2 {
+        font-size: 1.5em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+}
