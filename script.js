@@ -40,8 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < 20; i++) {
         const neonLine = document.createElement('div');
         neonLine.className = 'neon-line';
-        neonLine.style.left = `${Math.random() * 100}vw`;
-        neonLine.style.top = `-${Math.random() * 100}px`;
+        neonLine.style.left = `${Math.random() * 100}%`;
+        neonLine.style.top = `${Math.random() * 100}%`;
         neonLine.style.width = `${Math.random() * 3 + 1}px`;
         neonLine.style.height = `${Math.random() * 200 + 50}px`;
         neonLine.style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 255, 0.5)`;
