@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 40; i++) {
         const neonLine = document.createElement('div');
         neonLine.className = 'neon-line';
     
