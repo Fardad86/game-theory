@@ -255,9 +255,10 @@ section p {
     position: absolute;
     opacity: 0; /* شروع با شفافیت صفر */
     animation: moveNeonLine var(--animation-duration, 8s) var(--animation-delay, 0s) infinite ease-in-out;
+    pointer-events: none; /* جلوگیری از تداخل با عناصر دیگر */
 }
 
-/* انیمیشن برای حرکت خطوط نئونی از پایین به بالا با حرکت رندوم */
+/* انیمیشن برای حرکت خطوط نئونی از پایین به بالا */
 @keyframes moveNeonLine {
     0% {
         transform: translateX(calc(100vw * var(--random-x))) translateY(100vh) rotate(calc(360deg * var(--random-rotate)));
@@ -274,10 +275,11 @@ section p {
         opacity: 1; /* حفظ شفافیت قبل از خروج */
     }
     100% {
-        transform: translateX(calc(100vw * var(--random-x))) translateY(-100px) rotate(calc(360deg * var(--random-rotate)));
+        transform: translateX(calc(100vw * var(--random-x))) translateY(-100vh) rotate(calc(360deg * var(--random-rotate)));
         opacity: 0;
     }
 }
+
 
 
 
