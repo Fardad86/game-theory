@@ -40,16 +40,37 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < 20; i++) {
         const neonLine = document.createElement('div');
         neonLine.className = 'neon-line';
-        neonLine.style.left = `${Math.random() * 100}%`;
-        neonLine.style.top = `${Math.random() * 100}%`;
+    
+        // موقعیت خطوط در پایین صفحه و به صورت تصادفی در طول صفحه
+        neonLine.style.left = `${Math.random() * 100}vw`;
+        neonLine.style.top = `100vh`; // شروع از پایین صفحه
+    
+        // تنظیم عرض و ارتفاع به صورت تصادفی
         neonLine.style.width = `${Math.random() * 3 + 1}px`;
         neonLine.style.height = `${Math.random() * 200 + 50}px`;
-        neonLine.style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 255, 0.5)`;
-        neonLine.style.boxShadow = `0 0 10px rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 255, 0.7)`;
+    
+        // تنظیم رنگ و glow خطوط نئونی به صورت تصادفی
+        const randomR = Math.floor(Math.random() * 255);
+        const randomG = Math.floor(Math.random() * 255);
+        neonLine.style.backgroundColor = `rgba(${randomR}, ${randomG}, 255, 0.7)`;
+        neonLine.style.boxShadow = `0 0 20px rgba(${randomR}, ${randomG}, 255, 1), 
+                                    0 0 30px rgba(${randomR}, ${randomG}, 255, 0.8),
+                                    0 0 40px rgba(${randomR}, ${randomG}, 255, 0.6),
+                                    0 0 50px rgba(${randomR}, ${randomG}, 255, 0.4)`;
+    
+        // تنظیم زمان و تأخیر انیمیشن به صورت تصادفی
         neonLine.style.animationDuration = `${Math.random() * 5 + 3}s`;
         neonLine.style.animationDelay = `${Math.random() * 5}s`;
+    
+        // تنظیم متغیرهای رندوم برای حرکت طبیعی‌تر
+        neonLine.style.setProperty('--random-x', `${Math.random()}`);
+        neonLine.style.setProperty('--random-rotate', `${Math.random()}`);
+    
         neonBackground.appendChild(neonLine);
     }
+
+
+    
 
     // انیمیشن اسلایدر گالری تصاویر
     const gallerySlider = document.querySelector('.gallery-slider');
