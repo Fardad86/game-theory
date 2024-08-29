@@ -70,8 +70,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 
-    
-
     // انیمیشن اسلایدر گالری تصاویر
     const gallerySlider = document.querySelector('.gallery-slider');
     let galleryImages = gallerySlider.querySelectorAll('.gallery-image');
