@@ -22,37 +22,72 @@ main {
 
 /* استایل هدر */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: rgba(0, 31, 63, 0.8);
-    padding: 20px 0;
-    text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-header nav ul {
+.logo {
+    height: 50px;
+    margin-left: 15px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 31, 63, 0.9);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.nav-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-header nav ul li {
-    display: inline-block;
-    margin: 0 15px;
+.nav-menu ul li {
+    padding: 15px 20px;
+    text-align: right;
 }
 
-header nav ul li a {
+.nav-menu ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-header nav ul li a:hover {
+.nav-menu ul li a:hover {
     color: #00ffcc;
 }
 
@@ -90,11 +125,11 @@ section p {
 .team-slider {
     display: flex;
     overflow-x: auto;
-    scrollbar-width: none; /* برای حذف اسکرول بار در مرورگرهای مدرن */
+    scrollbar-width: none;
 }
 
 .team-slider::-webkit-scrollbar {
-    display: none; /* برای حذف اسکرول بار در مرورگرهای وب‌کیت */
+    display: none;
 }
 
 .team-member {
@@ -126,37 +161,29 @@ section p {
     pointer-events: none;
     z-index: -1;
     background: linear-gradient(135deg, #001f3f, #007f5f);
-    animation: backgroundAnimation 10s infinite alternate;
+    overflow: hidden;
 }
 
-/* انیمیشن‌های پس‌زمینه نئونی */
-@keyframes backgroundAnimation {
+/* خطوط نئونی رنگی در پس‌زمینه */
+.neon-line {
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    background-color: rgba(0, 255, 204, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
+    animation: moveNeonLine 8s infinite linear;
+}
+
+@keyframes moveNeonLine {
     0% {
-        background-position: 0% 50%;
+        transform: translateX(0) translateY(0) rotate(0deg);
     }
     100% {
-        background-position: 100% 50%;
+        transform: translateX(100vw) translateY(-100vh) rotate(360deg);
     }
 }
 
-/* انیمیشن‌های نئونی برای متن */
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc;
-    }
-    50% {
-        text-shadow: 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc, 0 0 160px #00ffcc, 0 0 320px #00ffcc;
-    }
-    100% {
-        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 40px #00ffcc, 0 0 80px #00ffcc;
-    }
-}
-
-section h2 {
-    animation: glow 2s infinite alternate;
-}
-
-/* استایل Footer */
+/* استایل فوتر */
 footer {
     background-color: rgba(0, 31, 63, 0.8);
     text-align: center;
@@ -171,6 +198,11 @@ footer p {
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5em;
+    }
+
+    .menu-icon {
+        width: 25px;
+        height: 18px;
     }
 
     section h2 {
