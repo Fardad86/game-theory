@@ -1,15 +1,10 @@
-// JS برای اضافه کردن انیمیشن‌ها و تعاملات پویا
+// منوی همبرگری
 document.addEventListener('DOMContentLoaded', function() {
-    // تغییر رنگ دکمه‌ها در هنگام هاور
-    const links = document.querySelectorAll('nav ul li a');
-    links.forEach(link => {
-        link.addEventListener('mouseenter', () => {
-            link.style.color = '#00ffcc';
-        });
+    const menuIcon = document.getElementById('menu-icon');
+    const navMenu = document.getElementById('nav-menu');
 
-        link.addEventListener('mouseleave', () => {
-            link.style.color = '#ffffff';
-        });
+    menuIcon.addEventListener('click', function() {
+        navMenu.classList.toggle('open');
     });
 
     // اسکرول نرم به بخش‌های مختلف
@@ -26,14 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // ایجاد خطوط و نقاط نئونی متحرک در پس‌زمینه
+    // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 20; i++) {
         const neonLine = document.createElement('div');
         neonLine.className = 'neon-line';
         neonLine.style.left = `${Math.random() * 100}%`;
         neonLine.style.top = `${Math.random() * 100}%`;
-        neonLine.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        neonLine.style.width = `${Math.random() * 3 + 1}px`;
+        neonLine.style.height = `${Math.random() * 200 + 50}px`;
+        neonLine.style.backgroundColor = `rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 255, 0.5)`;
+        neonLine.style.boxShadow = `0 0 10px rgba(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, 255, 0.7)`;
+        neonLine.style.animationDuration = `${Math.random() * 5 + 3}s`;
         neonLine.style.animationDelay = `${Math.random() * 5}s`;
         neonBackground.appendChild(neonLine);
     }
