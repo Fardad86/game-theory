@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg-timberwolf-100 {
+    background-color: #ebebea;
+}
+
+.bg-timberwolf-500 {
+    background-color: #d2d2cf;
+}
+
+.bg-dark_spring_green-100 {
+    background-color: #9fd9af;
+}
+
+.bg-dark_spring_green-500 {
+    background-color: #317a46;
+}
+
+.text-timberwolf-900 {
+    color: #2b2b29;
+}
+
+.text-dark_spring_green-300 {
+    color: #45ac62;
+}
