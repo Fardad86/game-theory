@@ -25,4 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+
+    // ایجاد خطوط و نقاط نئونی متحرک در پس‌زمینه
+    const neonBackground = document.querySelector('.neon-background');
+    for (let i = 0; i < 10; i++) {
+        const neonLine = document.createElement('div');
+        neonLine.className = 'neon-line';
+        neonLine.style.left = `${Math.random() * 100}%`;
+        neonLine.style.top = `${Math.random() * 100}%`;
+        neonLine.style.animationDuration = `${Math.random() * 5 + 5}s`;
+        neonLine.style.animationDelay = `${Math.random() * 5}s`;
+        neonBackground.appendChild(neonLine);
+    }
 });
