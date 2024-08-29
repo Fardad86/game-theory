@@ -50,6 +50,8 @@ header {
     justify-content: space-between;
     width: 30px;
     height: 21px;
+    position: relative;
+    z-index: 1001; /* اطمینان از اینکه منوی همبرگری بالاتر از عناصر دیگر است */
 }
 
 .menu-icon .bar {
@@ -68,6 +70,14 @@ header {
     right: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px #00ffcc;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease;
+}
+
+.nav-menu.open {
+    display: flex;
+    max-height: 300px;
 }
 
 .nav-menu ul {
@@ -91,13 +101,29 @@ header {
     color: #00ffcc;
 }
 
+/* استایل بخش معرفی مجموعه */
+.intro-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #001f3f, #007f5f);
+}
+
+.intro-logo {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
 /* کادرهای مات و blur */
 .blurred-box {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 20px;
-    margin: 20px 0;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1000px;
     box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
     position: relative;
     overflow: hidden;
@@ -143,44 +169,30 @@ section p {
     width: 100%;
     border-radius: 50%;
     border: 3px solid #00ffcc;
-    box-shadow: 0 0 10px #00ffcc;
+    margin-bottom: 10px;
 }
 
 .team-member p {
-    margin-top: 10px;
+    font-size: 1.1em;
     color: #00ffcc;
 }
 
-/* استایل پس‌زمینه نئونی */
-.neon-background {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* گالری تصاویر رویداد */
+.gallery-slider {
+    display: flex;
+    overflow-x: hidden;
+    position: relative;
     width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-    background: linear-gradient(135deg, #001f3f, #007f5f);
-    overflow: hidden;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 255, 204, 0.3);
 }
 
-/* خطوط نئونی رنگی در پس‌زمینه */
-.neon-line {
-    position: absolute;
-    width: 2px;
-    height: 100px;
-    background-color: rgba(0, 255, 204, 0.5);
-    box-shadow: 0 0 10px rgba(0, 255, 204, 0.7);
-    animation: moveNeonLine 8s infinite linear;
-}
-
-@keyframes moveNeonLine {
-    0% {
-        transform: translateX(0) translateY(0) rotate(0deg);
-    }
-    100% {
-        transform: translateX(100vw) translateY(-100vh) rotate(360deg);
-    }
+.gallery-image {
+    min-width: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
 }
 
 /* استایل فوتر */
