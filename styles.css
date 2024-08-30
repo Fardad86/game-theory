@@ -198,6 +198,12 @@ section p {
     color: white;
 }
 
+section p1 {
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: white;
+}
+
 /* نوار افقی برای معرفی اعضای تیم */
 .team-slider {
     display: flex;
