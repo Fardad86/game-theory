@@ -236,7 +236,7 @@ section p1 {
 /* افکت hover برای عکس‌ها */
 .team-member:hover img {
     transform: scale(1.1); /* بزرگ‌تر شدن عکس */
-    filter: blur(2px); /* تار کردن عکس */
+    box-shadow: 0 0 15px 5px rgba(0, 255, 204, 0.8); /* ایجاد افکت glow دور عکس */
 }
 
 .team-member p {
