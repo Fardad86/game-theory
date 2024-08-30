@@ -8,24 +8,24 @@ document.addEventListener('DOMContentLoaded', function() {
         menuIcon.classList.toggle('active');
     });
 
-    // اضافه کردن حرکت خودکار به اسلایدر اعضای تیم
-    const teamSlider = document.querySelector('.team-slider');
+    // // اضافه کردن حرکت خودکار به اسلایدر اعضای تیم
+    // const teamSlider = document.querySelector('.team-slider');
     
-    let scrollAmount = 0;
-    let maxScroll = teamSlider.scrollWidth - teamSlider.clientWidth;
-    let autoScrollSpeed = 1; // سرعت اسکرول خودکار
+    // let scrollAmount = 0;
+    // let maxScroll = teamSlider.scrollWidth - teamSlider.clientWidth;
+    // let autoScrollSpeed = 1; // سرعت اسکرول خودکار
     
-    function autoScrollSlider() {
-        scrollAmount += autoScrollSpeed;
-        if (scrollAmount >= maxScroll || scrollAmount <= 0) {
-            autoScrollSpeed *= -1; // تغییر جهت اسکرول در صورت رسیدن به انتهای اسلایدر
-        }
-        teamSlider.scrollLeft = scrollAmount;
-        requestAnimationFrame(autoScrollSlider);
-    }
+    // function autoScrollSlider() {
+    //     scrollAmount += autoScrollSpeed;
+    //     if (scrollAmount >= maxScroll || scrollAmount <= 0) {
+    //         autoScrollSpeed *= -1; // تغییر جهت اسکرول در صورت رسیدن به انتهای اسلایدر
+    //     }
+    //     teamSlider.scrollLeft = scrollAmount;
+    //     requestAnimationFrame(autoScrollSlider);
+    // }
     
-    // شروع حرکت خودکار
-    autoScrollSlider();
+    // // شروع حرکت خودکار
+    // autoScrollSlider();
 
 
     // انیمیشن منوی همبرگری
