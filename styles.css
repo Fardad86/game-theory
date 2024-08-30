@@ -215,7 +215,6 @@ section p2 {
     display: flex;
     overflow-x: auto;
     scrollbar-width: none;
-    scroll-behavior: smooth; /* اضافه کردن اسکرول نرم */
 }
 
 .team-slider::-webkit-scrollbar {
