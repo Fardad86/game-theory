@@ -1,20 +1,15 @@
     // script.js
     
 document.addEventListener('DOMContentLoaded', function() {
-    
-    var menuToggle = document.getElementById('menu-toggle');
     var menu = document.getElementById('menu');
-    var toggleIcon = document.getElementById('toggle-icon');
-
-    menuToggle.addEventListener('click', function() {
-        if (menu.classList.contains('open')) {
-            menu.classList.remove('open');
-            toggleIcon.textContent = '≡';
-        } else {
-            menu.classList.add('open');
-            toggleIcon.textContent = '×';
-        }
-    });
+    menu.classList.toggle('open');
+    
+    var icon = document.getElementById('toggle-icon');
+    if (menu.classList.contains('open')) {
+        icon.textContent = '×'; // تغییر به علامت ضربدر
+    } else {
+        icon.textContent = '≡'; // بازگشت به علامت همبرگری
+    }
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
