@@ -5,7 +5,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    direction: rtl;
+    direction: rtl; /* جهت راست به چپ */
     overflow-x: hidden;
 }
 
