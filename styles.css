@@ -35,6 +35,43 @@ header {
     backdrop-filter: blur(15px); /* مات کردن پس‌زمینه */
 }
 
+.menu-toggle {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.menu {
+    display: none;
+    overflow: hidden;
+    background-color: #444;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.menu.open {
+    display: block;
+    max-height: 300px; /* ارتفاع حداکثر برای منو */
+}
+
+.menu.close {
+    max-height: 0;
+    display: none;
+}
+
 .logo-container {
     display: flex;
     align-items: center;
