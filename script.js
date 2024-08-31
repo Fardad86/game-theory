@@ -1,15 +1,21 @@
     // script.js
     
 document.addEventListener('DOMContentLoaded', function() {
-    var menu = document.getElementById('menu');
-    menu.classList.toggle('open');
-    
-    var icon = document.getElementById('toggle-icon');
-    if (menu.classList.contains('open')) {
-        icon.textContent = '×'; // تغییر به علامت ضربدر
-    } else {
-        icon.textContent = '≡'; // بازگشت به علامت همبرگری
-    }
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const toggleIcon = document.getElementById('toggle-icon');
+
+    menuToggle.addEventListener('click', function() {
+        // Toggle the 'open' class on the menu
+        menu.classList.toggle('open');
+
+        // Change the icon based on the menu's state
+        if (menu.classList.contains('open')) {
+            toggleIcon.textContent = '×'; // Change to close icon
+        } else {
+            toggleIcon.textContent = '≡'; // Change to hamburger icon
+        }
+    });
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
