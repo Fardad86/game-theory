@@ -1,19 +1,21 @@
-
-    var menuToggle = document.getElementById('menu-toggle');
-    var menu = document.getElementById('menu');
-    var toggleIcon = document.getElementById('toggle-icon');
-
-    menuToggle.addEventListener('click', function() {
-        if (menu.classList.contains('open')) {
-            menu.classList.remove('open');
-            menu.classList.add('close');
-            toggleIcon.textContent = '/\\';
-        } else {
-            menu.classList.remove('close');
-            menu.classList.add('open');
-            toggleIcon.textContent = '\\/';
-        }
+    // script.js
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var menuToggle = document.getElementById('menu-toggle');
+        var menu = document.getElementById('menu');
+        var toggleIcon = document.getElementById('toggle-icon');
+    
+        menuToggle.addEventListener('click', function() {
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                toggleIcon.textContent = '≡';
+            } else {
+                menu.classList.add('open');
+                toggleIcon.textContent = '×';
+            }
+        });
     });
+    
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
