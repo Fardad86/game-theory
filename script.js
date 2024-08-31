@@ -1,17 +1,18 @@
 
+    var menuToggle = document.getElementById('menu-toggle');
+    var menu = document.getElementById('menu');
+    var toggleIcon = document.getElementById('toggle-icon');
 
-    // اسکرول نرم به بخش‌های مختلف
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
-            window.scrollTo({
-                top: targetSection.offsetTop - 60,
-                behavior: 'smooth'
-            });
-        });
+    menuToggle.addEventListener('click', function() {
+        if (menu.classList.contains('open')) {
+            menu.classList.remove('open');
+            menu.classList.add('close');
+            toggleIcon.textContent = '/\\';
+        } else {
+            menu.classList.remove('close');
+            menu.classList.add('open');
+            toggleIcon.textContent = '\\/';
+        }
     });
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
