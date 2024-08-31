@@ -347,11 +347,11 @@ footer p {
     }
 
     .team-member {
-        width: 80px; /* کاهش عرض اعضای تیم */
+        width: 120px; /* کاهش عرض اعضای تیم */
     }
 
     .team-member img {
-        border-radius: 10px; /* کاهش میزان گرد شدن گوشه‌ها */
+        border-radius: 20px; /* کاهش میزان گرد شدن گوشه‌ها */
     }
 
     .logo {
@@ -386,7 +386,7 @@ footer p {
     }
 
     .team-member {
-        width: 70px; /* کاهش بیشتر عرض اعضای تیم */
+        width: 100px; /* کاهش بیشتر عرض اعضای تیم */
     }
 
     .logo {
