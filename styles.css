@@ -330,23 +330,75 @@ footer p {
 /* استایل‌های واکنش‌گرا */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.5em;
+        font-size: 1.2em; /* کاهش اندازه فونت هدر */
     }
 
     .menu-icon {
-        width: 25px;
-        height: 18px;
+        width: 20px;
+        height: 15px; /* کاهش اندازه آیکون منو */
     }
 
     section h2 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* کاهش اندازه عنوان‌ها */
     }
 
     section p {
-        font-size: 1em;
+        font-size: 0.9em; /* کاهش اندازه پاراگراف‌ها */
     }
 
     .team-member {
-        width: 100px;
+        width: 80px; /* کاهش عرض اعضای تیم */
+    }
+
+    .team-member img {
+        border-radius: 10px; /* کاهش میزان گرد شدن گوشه‌ها */
+    }
+
+    .logo {
+        height: 70px; /* کاهش ارتفاع لوگو */
+    }
+
+    .intro-section h2 {
+        font-size: 2.5em; /* کاهش اندازه عنوان در بخش معرفی */
+    }
+
+    .gallery-slider {
+        height: 200px; /* کاهش ارتفاع گالری تصاویر */
     }
 }
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1em; /* کاهش بیشتر اندازه فونت هدر */
+    }
+
+    .menu-icon {
+        width: 18px;
+        height: 13px; /* کاهش بیشتر اندازه آیکون منو */
+    }
+
+    section h2 {
+        font-size: 1.2em; /* کاهش بیشتر اندازه عنوان‌ها */
+    }
+
+    section p {
+        font-size: 0.8em; /* کاهش بیشتر اندازه پاراگراف‌ها */
+    }
+
+    .team-member {
+        width: 70px; /* کاهش بیشتر عرض اعضای تیم */
+    }
+
+    .logo {
+        height: 50px; /* کاهش بیشتر ارتفاع لوگو */
+    }
+
+    .intro-section h2 {
+        font-size: 2em; /* کاهش بیشتر اندازه عنوان در بخش معرفی */
+    }
+
+    .gallery-slider {
+        height: 150px; /* کاهش بیشتر ارتفاع گالری تصاویر */
+    }
+}
+
