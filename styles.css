@@ -37,11 +37,12 @@ header {
 
 .menu-toggle {
     cursor: pointer;
-    font-size: 20px;
+    font-size: 24px;
+    color: #fff;
 }
 
 .menu {
-    display: none;
+    max-height: 0;
     overflow: hidden;
     background-color: #444;
     transition: max-height 0.5s ease-in-out;
@@ -55,22 +56,19 @@ header {
 
 .menu ul li {
     padding: 10px;
+    text-align: center;
 }
 
 .menu ul li a {
     color: #fff;
     text-decoration: none;
+    display: block;
 }
 
 .menu.open {
-    display: block;
-    max-height: 300px; /* ارتفاع حداکثر برای منو */
+    max-height: 200px; /* حداکثر ارتفاع برای منو */
 }
 
-.menu.close {
-    max-height: 0;
-    display: none;
-}
 
 .logo-container {
     display: flex;
