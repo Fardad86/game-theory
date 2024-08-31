@@ -1,21 +1,20 @@
     // script.js
     
-    document.addEventListener('DOMContentLoaded', function() {
-        var menuToggle = document.getElementById('menu-toggle');
-        var menu = document.getElementById('menu');
-        var toggleIcon = document.getElementById('toggle-icon');
+document.addEventListener('DOMContentLoaded', function() {
     
-        menuToggle.addEventListener('click', function() {
-            if (menu.classList.contains('open')) {
-                menu.classList.remove('open');
-                toggleIcon.textContent = '≡';
-            } else {
-                menu.classList.add('open');
-                toggleIcon.textContent = '×';
-            }
-        });
+    var menuToggle = document.getElementById('menu-toggle');
+    var menu = document.getElementById('menu');
+    var toggleIcon = document.getElementById('toggle-icon');
+
+    menuToggle.addEventListener('click', function() {
+        if (menu.classList.contains('open')) {
+            menu.classList.remove('open');
+            toggleIcon.textContent = '≡';
+        } else {
+            menu.classList.add('open');
+            toggleIcon.textContent = '×';
+        }
     });
-    
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
