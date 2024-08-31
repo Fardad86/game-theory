@@ -25,14 +25,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* کاهش پدینگ برای کاهش ارتفاع هدر */
-    background-color: rgba(0, 31, 63, 0.6); /* مات کردن پس‌زمینه */
+    padding: 10px 20px;
+    background-color: rgba(0, 31, 63, 0.6);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(0, 255, 204, 0.3); /* اضافه کردن لبه نئونی */
-    backdrop-filter: blur(15px); /* مات کردن پس‌زمینه */
+    border-bottom: 1px solid rgba(0, 255, 204, 0.3);
+    backdrop-filter: blur(15px);
 }
 
 /* استایل لوگو */
@@ -54,6 +54,7 @@ header {
     position: absolute; /* موقعیت آیکون منو */
     left: 20px; /* تنظیم فاصله از سمت چپ */
     top: 15px; /* تنظیم فاصله از بالا */
+    z-index: 1100; /* اطمینان از نمایش در بالاترین لایه */
 }
 
 /* استایل منو */
@@ -114,14 +115,13 @@ header {
 
 /* انیمیشن باز و بسته شدن منو */
 .menu.open {
-    max-height: 200px; /* ارتفاعی برای نمایش منو در حالت باز */
+    max-height: 200px;
 }
 
 /* انیمیشن و glow */
 .menu ul li a:hover {
     text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
-
 
 
 .logo-container {
