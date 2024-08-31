@@ -1,45 +1,4 @@
-// منوی همبرگری
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const navMenu = document.getElementById('nav-menu');
 
-    menuIcon.addEventListener('click', function() {
-        navMenu.classList.toggle('open');
-        menuIcon.classList.toggle('active');
-    });
-
-    // // اضافه کردن حرکت خودکار به اسلایدر اعضای تیم
-    // const teamSlider = document.querySelector('.team-slider');
-    
-    // let scrollAmount = 0;
-    // let maxScroll = teamSlider.scrollWidth - teamSlider.clientWidth;
-    // let autoScrollSpeed = 1; // سرعت اسکرول خودکار
-    
-    // function autoScrollSlider() {
-    //     scrollAmount += autoScrollSpeed;
-    //     if (scrollAmount >= maxScroll || scrollAmount <= 0) {
-    //         autoScrollSpeed *= -1; // تغییر جهت اسکرول در صورت رسیدن به انتهای اسلایدر
-    //     }
-    //     teamSlider.scrollLeft = scrollAmount;
-    //     requestAnimationFrame(autoScrollSlider);
-    // }
-    
-    // // شروع حرکت خودکار
-    // autoScrollSlider();
-
-
-    // انیمیشن منوی همبرگری
-    menuIcon.addEventListener('click', function() {
-        if (menuIcon.classList.contains('active')) {
-            menuIcon.querySelectorAll('.bar')[0].style.transform = 'rotate(45deg) translateY(8px)';
-            menuIcon.querySelectorAll('.bar')[1].style.opacity = '0';
-            menuIcon.querySelectorAll('.bar')[2].style.transform = 'rotate(-45deg) translateY(-8px)';
-        } else {
-            menuIcon.querySelectorAll('.bar')[0].style.transform = 'rotate(0)';
-            menuIcon.querySelectorAll('.bar')[1].style.opacity = '1';
-            menuIcon.querySelectorAll('.bar')[2].style.transform = 'rotate(0)';
-        }
-    });
 
     // اسکرول نرم به بخش‌های مختلف
     const navLinks = document.querySelectorAll('nav ul li a');
