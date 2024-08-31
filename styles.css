@@ -37,11 +37,8 @@ header {
     transition: all 0.3s ease;
 }
 
-header.expanded {
-    padding-bottom: 150px; /* Adjust based on the height of the menu */
-}
-
-.logo-container {
+/* تنظیمات هدر محتوا */
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,8 +60,8 @@ header.expanded {
 /* استایل منو */
 .menu {
     display: none;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     background-color: rgba(0, 31, 63, 0.9);
     position: absolute;
     top: 100%;
@@ -75,19 +72,19 @@ header.expanded {
 
 .menu.open {
     display: flex;
-    max-height: 400px; /* Adjust based on the content */
+    max-height: 60px; /* Adjust based on the height of the menu */
 }
 
+/* استایل لینک‌های منو */
 .menu ul {
+    display: flex;
     list-style: none;
     padding: 0;
     margin: 0;
-    width: 100%;
 }
 
 .menu li {
     padding: 10px;
-    text-align: center;
 }
 
 .menu a {
@@ -105,13 +102,6 @@ header.expanded {
 .menu.open {
     display: flex;
 }
-
-
-/* انیمیشن و glow */
-.menu ul li a:hover {
-    text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc;
-}
-
 
 .logo-container {
     display: flex;
