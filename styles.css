@@ -46,9 +46,10 @@ header {
 
 /* منوی همبرگری */
 .menu-toggle {
-    font-size: 24px;
+    font-size: 40px;
     cursor: pointer;
     color: #fff;
+    left: 30px; /* تنظیم فاصله از سمت چپ */
     transition: color 0.3s ease;
 }
 
