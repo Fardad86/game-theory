@@ -51,6 +51,9 @@ header {
     cursor: pointer;
     font-size: 24px;
     color: #00ffcc;
+    position: absolute; /* موقعیت آیکون منو */
+    left: 20px; /* تنظیم فاصله از سمت چپ */
+    top: 15px; /* تنظیم فاصله از بالا */
 }
 
 /* استایل منو */
@@ -62,7 +65,7 @@ header {
     border-bottom: 1px solid rgba(0, 255, 204, 0.3);
     backdrop-filter: blur(15px);
     position: fixed;
-    top: 60px; /* تنظیم موقعیت منو زیر هدر */
+    top: 60px;
     width: 100%;
     max-height: 0;
     overflow: hidden;
