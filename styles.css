@@ -49,11 +49,11 @@ header {
 /* استایل آیکون منو */
 .menu-toggle {
     cursor: pointer;
-    font-size: 24px;
+    font-size: 60px;
     color: #00ffcc;
     position: absolute; /* موقعیت آیکون منو */
-    left: 50px; /* تنظیم فاصله از سمت چپ */
-    top: 15px; /* تنظیم فاصله از بالا */
+    left: 70px; /* تنظیم فاصله از سمت چپ */
+    top: 30px; /* تنظیم فاصله از بالا */
     z-index: 1100; /* اطمینان از نمایش در بالاترین لایه */
 }
 
