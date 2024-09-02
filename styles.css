@@ -49,7 +49,7 @@ header {
     font-size: 40px;
     cursor: pointer;
     color: #fff;
-    left: 30px; /* تنظیم فاصله از سمت چپ */
+    left: 50px; /* تنظیم فاصله از سمت چپ */
     transition: color 0.3s ease;
 }
 
