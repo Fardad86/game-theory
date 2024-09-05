@@ -212,13 +212,15 @@ section p {
 
 section p1 {
     font-size: 1.2em;
-    line-height: 1.8;
+    line-height: 1.4; /* کاهش فاصله بین خطوط */
+    letter-spacing: -0.5px; /* کاهش فاصله بین حروف */
     color: white;
 }
 
 section p2 {
     font-size: 0.9em;
-    line-height: 1.8;
+    line-height: 1.4; /* کاهش فاصله بین خطوط */
+    letter-spacing: -0.5px; /* کاهش فاصله بین حروف */
     color: white;
 }
 
