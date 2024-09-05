@@ -369,6 +369,14 @@ footer p {
     section p {
         font-size: 0.9em; /* کاهش اندازه پاراگراف‌ها */
     }
+    
+    section p1 {
+        font-size: 1.2em; /* کاهش اندازه پاراگراف‌ها نام اعضا */
+    }
+    
+    section p2 {
+        font-size: 0.9em; /* کاهش اندازه پاراگراف‌ها توضیح اعضا */
+    }
 
     .team-member {
         width: 140px; /* کاهش عرض اعضای تیم */
@@ -407,6 +415,14 @@ footer p {
 
     section p {
         font-size: 0.8em; /* کاهش بیشتر اندازه پاراگراف‌ها */
+    }
+    
+    section p1 {
+        font-size: 1em; /* کاهش بیشر اندازه پاراگراف‌ها نام اعضا */
+    }
+    
+    section p2 {
+        font-size: 0.8em; /* کاهش بیشتر اندازه پاراگراف‌ها توضیح اعضا */
     }
 
     .team-member {
