@@ -362,7 +362,7 @@ footer p {
 /* استایل‌های واکنش‌گرا */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 1.2em; /* کاهش اندازه فونت هدر */
+        font-size: 1.7em; /* کاهش اندازه فونت هدر */
     }
 
     .menu-icon {
@@ -397,7 +397,7 @@ footer p {
     }
 
     .logo {
-        height: 70px; /* کاهش ارتفاع لوگو */
+        height: 80px; /* کاهش ارتفاع لوگو */
     }
 
     .intro-section h2 {
@@ -411,7 +411,7 @@ footer p {
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1em; /* کاهش بیشتر اندازه فونت هدر */
+        font-size: 1.5em; /* کاهش بیشتر اندازه فونت هدر */
     }
 
     .menu-icon {
@@ -442,7 +442,7 @@ footer p {
     }
 
     .logo {
-        height: 50px; /* کاهش بیشتر ارتفاع لوگو */
+        height: 70px; /* کاهش بیشتر ارتفاع لوگو */
     }
 
     .intro-section h2 {
