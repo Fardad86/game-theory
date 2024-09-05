@@ -374,12 +374,12 @@ footer p {
     
     section p1 {
         font-size: 1em; /* کاهش اندازه پاراگراف‌ها نام اعضا */
-        line-height: 0.8;
+        line-height: 10px;
     }
     
     section p2 {
         font-size: 0.7em; /* کاهش اندازه پاراگراف‌ها توضیح اعضا */
-        line-height: 0.8;
+        line-height: 10px;
     }
 
     .team-member {
@@ -423,12 +423,12 @@ footer p {
     
     section p1 {
         font-size: 0.8em; /* کاهش بیشر اندازه پاراگراف‌ها نام اعضا */
-        line-height: 0.6;
+        line-height: 10px;
     }
     
     section p2 {
         font-size: 0.6em; /* کاهش بیشتر اندازه پاراگراف‌ها توضیح اعضا */
-        line-height: 0.6;
+        line-height: 10px;
     }
 
     .team-member {
