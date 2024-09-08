@@ -50,66 +50,6 @@ header {
     animation: glowPulse 2s infinite alternate; /* انیمیشن برای تنفس */
 }
 
-/* منوی همبرگری */
-.menu-toggle {
-    font-size: 40px;
-    cursor: pointer;
-    color: #fff;
-    left: 50px; /* تنظیم فاصله از سمت چپ */
-    transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    color: #0ff; /* رنگ نئون هنگام هاور */
-}
-
-/* استایل منو */
-.menu {
-    display: none;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgba(0, 31, 63, 0.9);
-    position: absolute;
-    top: 100%;
-    width: 100%;
-    transition: max-height 0.5s ease;
-    overflow: hidden;
-}
-
-.menu.open {
-    display: flex;
-    max-height: 60px; /* Adjust based on the height of the menu */
-}
-
-/* استایل لینک‌های منو */
-.menu ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu li {
-    padding: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.menu a:hover {
-    color: #0ff; /* رنگ نئون هنگام هاور */
-}
-
-/* استایل فعال منو */
-.menu.open {
-    display: flex;
-}
-
-
 .logo-container {
     display: flex;
     align-items: center;
