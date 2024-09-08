@@ -1,24 +1,8 @@
     // script.js
     
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
     const header = document.querySelector('header');
     const toggleIcon = document.getElementById('toggle-icon');
-
-    menuToggle.addEventListener('click', function() {
-        // Toggle the 'open' class on the menu
-        menu.classList.toggle('open');
-        // Toggle the 'expanded' class on the header
-        header.classList.toggle('expanded');
-
-        // Change the icon based on the menu's state
-        if (menu.classList.contains('open')) {
-            toggleIcon.textContent = '×'; // Change to close icon
-        } else {
-            toggleIcon.textContent = '≡'; // Change to hamburger icon
-        }
-    });
 
     // ایجاد خطوط نئونی متحرک در پس‌زمینه
     const neonBackground = document.querySelector('.neon-background');
