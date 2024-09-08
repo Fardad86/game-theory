@@ -25,7 +25,6 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-/*     padding: 10px 20px; */
     background-color: rgba(0, 31, 63, 0.6);
     position: fixed;
     width: 100%;
@@ -34,6 +33,39 @@ header {
     border-bottom: 1px solid rgba(0, 255, 204, 0.3);
     backdrop-filter: blur(15px);
     transition: all 0.3s ease;
+}
+
+/* تنظیمات منو */
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.navbar__item {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar__link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.navbar__link:hover {
+    color: #C4151C;
 }
 
 /* تنظیمات هدر محتوا */
@@ -50,23 +82,22 @@ header {
     animation: glowPulse 2s infinite alternate; /* انیمیشن برای تنفس */
 }
 
+/* تنظیمات لوگو */
 .logo-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* مرکز کردن لوگو در کانتینر */
 }
 
 .logo {
     height: 100px;
     margin-left: 15px;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.5)); /* ایجاد افکت glow */
-    transition: transform 0.3s ease, filter 0.3s ease; /* اضافه کردن ترنزیشن برای افکت */
+    filter: drop-shadow(0 0 10px rgba(0, 255, 204, 0.5));
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-/* افکت برای زمانی که کاربر نشانگر موس را روی لوگو می‌برد */
 .logo-container:hover .logo {
-    filter: drop-shadow(0 0 30px rgba(0, 255, 204, 1)); /* افزایش شدت glow */
-    transform: scale(1.1); /* بزرگ‌تر شدن لوگو در هنگام hover */
+    filter: drop-shadow(0 0 30px rgba(0, 255, 204, 1));
+    transform: scale(1.1);
 }
 
 /* استایل بخش معرفی مجموعه */
