@@ -50,5 +50,22 @@ document.addEventListener('DOMContentLoaded', function() {
         galleryImages[currentIndex].style.opacity = '1';
     }
 
+    // کد موجود برای تنظیمات لوگو
+    document.querySelector('.logo-container').addEventListener('mouseenter', function() {
+        const logo = document.querySelector('.logo');
+        logo.style.transform = 'scale(1.1)';
+        logo.style.filter = 'drop-shadow(0 0 30px rgba(0, 255, 204, 1))';
+    });
+    
+    document.querySelector('.logo-container').addEventListener('mouseleave', function() {
+        const logo = document.querySelector('.logo');
+        logo.style.transform = 'scale(1)';
+        logo.style.filter = 'drop-shadow(0 0 10px rgba(0, 255, 204, 0.5))';
+    });
+    
+    // اضافه کردن Feather Icons
+    feather.replace();
+
+
     setInterval(showNextImage, 3000);
 });
